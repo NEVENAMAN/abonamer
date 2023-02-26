@@ -8,7 +8,10 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
+  .head_nav{
+    width:auto;
+    margin-left: 295px;
+  }
   #hamburger-icon {
     display: block;
   }
