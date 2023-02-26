@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sadeemlanding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/docs_min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap_min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+        header{
+            position: fixed;
+            box-shadow: 0px 0px 10px -2px #ddd;
+            background-color: #FFFFFF;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            margin-top: -202px;
+            z-index: 1;
+            width: 100%;
+        }
+        
+        .head_nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 295px;
+            padding: 20px 0px;
+            --tw-text-opacity: 1;
+            color: rgb(0 87 165 / var(--tw-text-opacity));
+        }
+        .head_nav ul{
+            position: relative;
+            list-style: none;
+            display: flex;
+            margin-top: 0px;
+            top: 16px;
+            margin-left: 300px;
+        }
+        .head_nav li{
+            margin-right: 20px;
+            font-size: larger;
+            font-family: system-ui;
+        }
+        .head_nav a{
+            color: #0057Af;
+        }
+        .whatsapp{
+            background-color: #f07500;
+            padding: 10px 25px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 700;
+            height: 50px;
+            width: 163px;
+            border: none;
+            transition-duration: 0.4s;
+        }
+        .whatsapp:hover{
+            background-color: #1777de;
+        }
+        .whatsapp:visited{
+            background-color: #1777de;
+        }
+        .whatsapp a{
+            color: white;
+        }
+        .whatsapp img{
+            width: 26px;
+            margin-left: 5px;
+        }
+        /* end style header of index page */
+        .contianer{
+            width:1200px;
+            margin: auto;
+        }
+        .contianer .contact_us{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 200px;
+            text-align: right;
+            margin-bottom: 200px;
+        }
+        .contact_us h1{
+            color: #0057A5;
+        }
+        .contianer .secand_head{
+            color:#f07500;
+        }
+        .contianer img{
+            width: 40%;
+        }
+        .contianer h6{
+          color: #f07500;
+        }
+        .contact_us p{
+            font-family: system-ui;
+            font-size: 16px;
+            line-height: 1.8;
+            line-break: auto;
+            width: 544px;
+            color: #0057A5;
+            opacity: 0.8;
+        }
+        .contact_us button:hover{
+          background-color: #1777de;
+          color: white;
+        }
+        .contact_us input{
+            border-radius: 30px;
+            padding: 16px;
+            width: 260px;
+            height: 56px;
+            margin-bottom: 18px;
+            margin-left: 18px;
+            text-align: right;
+            border-color: #d3cccc;
+            border-style: solid;
+            color: #0057a5;
+            opacity: 0.7;
+        }
+        ::placeholder{
+            color: #0057af;
+        }
+        .contact_us button{
+            width: 140px;
+            border-radius: 25px;
+            height: 50px;
+            background-color: #f07f00;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+        } 
+        .our_services{
+            text-align: center;
+        }
+        .our_services h1{
+            color: #0057A5;
+        }
+        .our_services .servies{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card{
+            box-shadow: 4px 4px 4px 2px #d1cfcf;
+            margin:20px 10px;
+        }
+        .our_services h1{
+            margin-bottom: 100px;
+        }
+        .our_services img{
+            width: 70px;
+            margin-top: 20px;
+        }
+        .our_services h2{
+            color: #0056af;
+            font-family: sans-serif;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        .video .cards{
+            display: flex;
+            justify-content: space-between;
+            text-align: right;
+            margin-bottom: 200px;
+            margin-top: 70px;
+            position: relative;
+            top: 80px;
+            align-items: center;
+        }
+        .video .content{
+            width: min-content;
+        }
+        .video p{
+            font-family: system-ui;
+            line-break: auto;
+            width: 544px;
+            color: #0057A5;
+            opacity: 0.8;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: inherit;
+        }
+        .video h1{
+            color: #0057A5;
+        }
+        /* end style main content of index page */
+        footer{
+            background-color: #f07f00;
+            height: 408px;
+            
+        }
+        .footer_content{
+            width: 1200px;
+            margin: auto;
+            text-align: center;
+            color: white;
+            padding:96px 32px 0px;
+        }
+        .footer_content p{
+            font-family: system-ui;  
+            font-size: 20px;
+            line-height: 1.8;
+            line-break: auto;
+            
+        }
+        .footer_content span{
+            color: #0057A5;
+        }
+        .footer_content .social_icon{
+            display: flex;
+            justify-content: center;
+        }
+        .social_icon img{
+            width: 40px;
+            margin-right: 10px;
+        }
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+header a {
+  text-decoration: none;
+}
+
+
+#brand {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#brand a {
+  color: #09c372;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: white;
+  position: right;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 115 232 / var(--tw-bg-opacity));
+
+}
+.open a{
+  font-family: system-ui;
+  font-size: xx-large;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+  
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  header nav{
+    display: none;
+  }
+
+  header{
+    margin-top: -254px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+  .whatsapp{
+    position: relative;
+    left: -200px;
+    top: 65px;
+  }
+  #logo{
+    position: relative;
+    top: 48px;
+    width: 80px;
+    height: 80px;
+    right: 158px;
+  }
+  .contianer{
+    width: 80%;
+  }
+  .contact_us{
+    flex-direction: column;
+  }
+  .contact_us .secand_head{
+    position: relative;
+    top: -352px;
+  }
+  .contact_us h1{
+    position: relative;
+    top: -352px;
+  }
+  .contact_us img{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+    top: 170px;
+  }
+  .contianer p{
+    width: auto;
+  }
+  .cards{
+    flex-direction: column;
+    
+  }
+  .cards h1{
+    text-align: center;
+    position: relative;
+    top: -229px;
+  }
+  .cards .content{
+    width: fit-content;
+  }
+  .cards #secand_h{
+    position: relative;
+    top: -40px;
+  }
+  .cards #secand_p{
+    position: relative;
+    top: 296px;
+  }
+  .cards #secand_img{
+    position: relative;
+    top: -158px;
+  }
+  .cards #thired_img{
+    position: relative;
+    top:24px;
+  }
+  .cards img{
+    width: 80%;
+    position: relative;
+    top: 124px;
+  }
+  footer{
+    height: 600px;
+  }
+  .footer_content{
+        width: auto;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head_nav" >
+            <form action="https://api.whatsapp.com/send/?phone=%2B972522333657&text&type=phone_number&app_absent=0" >
+                <button type="submit" class="whatsapp">تواصل معنا <img src="{% static 'images/whatsapp.png' %}" width="40px"></button>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="#contac">تواصل معنا</a></li>
+                    <li><a href="#vied">الفيديو</a></li>
+                    <li><a href="#service">خدماتنا</a></li>
+                    <li><a href="#foot">من نحن</a></li>
+                </ul>
+            </nav>
+            <a href="/"><img src="{% static 'images/logo.png' %}" height="62px" alt="logo of company" id="logo"></a>
+          </div>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="#contac">تواصل معنا</a></li>
+                <li><a href="#vied">الفيديو</a></li>
+                <li><a href="#service">خدماتنا</a></li>
+                <li><a href="#foot">من نحن</a></li>
+            </ul>
+          </div> 
+    </header>
+    <main>
+        <div class="contianer">
+            <!-- contact section  -->
+            <div class="contact_us" id="contac">
+                <img src="{% static 'images/leftBaneerPhoto.png'%}">
+                <div class="content">
+                    <h1>صار الوقت تطلع عالشاشات</h1>
+                    <h1 class="secand_head"> !بأحسن صورة </h1>
+                    <h6>  : لمن يريد</h6>
+                    <p>عرض منتجات | شرح مهني | توصيل رسالة | عرض فكرة | ترسيخ مفاهيم | إعلان عن دورات | إعلان عن برامج | عرض خدمات | كورس أونلاين | سلسلة حلقات.. كل هذه المزايا تقدمها إليك شركة ابو نمر آدس في استوديو تصوير خاص مهيأ بالأدوات والمعدات اللازمة</p>
+                    <form action="" method="post">
+                        <input type="text"  placeholder="البلد">
+                        <input type="text" placeholder="الاسم كامل"><br>
+                        <input type="text" placeholder="رقم التليفون">
+                        <input type="text" placeholder="اسم الشركة"><br>
+                        <button type="submit" class="btn btn-warning">ارسال</button>
+                    </form>
+
+                </div>
+            </div>
+            <!-- services section -->
+            <div class="our_services" >
+                <h1> ما الخدمات التي  <span class="secand_head">نقدمها لك</span>     </h1>
+                <div class="servies">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="{% static 'images/capture.png' %}">
+                          <h2 class="card-title">تصوير احترافي على شاشة خضراء</h2>
+                          
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;" id="service">
+                        <div class="card-body">
+                            <img src="{% static 'images/product.png' %}">
+                            <h2 class="card-title">مونتاج</h2>
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <img src="{% static 'images/writing.png' %}">
+                            <h2 class="card-title">كتابة محتوى</h2>
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <img src="{% static 'images/camera.png' %}">
+                            <h2 class="card-title">كيفية الوقوف أمام الكاميرا</h2>
+                        </div>
+                      </div>
+                      
+                </div>
+            </div>
+            <!-- video section -->
+            <div class="video" >
+                <div class="cards">
+                    <img src="{% static 'images/FirstVideoLeft.png'%}">
+                    <div class="content">
+                        <h1>أهمية الفيديو على <span class="secand_head">منصات التواصل الاجتماعي</span></h1>
+                        <p>أصبحت الرؤية على وسائل التواصل الاجتماعي جانبًا مهمًا للعلامة التجارية الشخصية والترويج الذاتي في العصر الرقمي اليوم. توفر منصات وسائل التواصل الاجتماعي منصة للأفراد لعرض مواهبهم ومهاراتهم وشخصياتهم، مما يسهل الوصول إليهم.</p>
+                    </div>
+                </div>
+                <div class="cards" id="vied">
+                    <div class="content">
+                        <h1 id="secand_h">تأثير <span class="secand_head" >الفيديو </span></h1>
+                        <p id="secand_p">مقاطع الفيديو أداة قوية لسرد القصص ويمكن أن تنقل رسالة بطريقة ديناميكية وجذابة. يمكنهم إثارة المشاعر وخلق انطباع دائم، مما يجعلها أداة فعالة للإعلان، التسويق والتعليم.</p>
+                    </div>
+                    <img src="{% static 'images/secondVideMid.png'%}" id="secand_img">
+
+                </div>
+                <div class="cards">
+                    <img src="{% static 'images/thirdphotoLeft.png'%}" id="thired_img">
+                    <div class="content">
+                        <h1 >إنتاج  <span class="secand_head"> الفيديو</span></h1>
+                        <p>أصبح إنتاج الفيديو مهمًا بشكل متزايد في عالم اليوم لأنه أداة قوية للاتصال والتسويق. سهّل انتشار وسائل التواصل الاجتماعي على الأشخاص مشاركة مقاطع الفيديو واستهلاكها، مما يجعلها منصة قيّمة للشركات للوصول إلى جمهور أوسع لا يمكن لمقطع فيديو عالي الجودة أن يجذب انتباه العملاء المحتملين فحسب، بل يمكن أن يساعد أيضًا في بناء الوعي بالعلامة التجارية، وإثبات المصداقية، وزيادة المشاركة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+    <footer id="foot">
+        <div class="footer_content">
+            <h1> في شركة <span>أبو نمر آدس</span></h1>
+            <p>فريق يرافقك في كتابة محتوى جذاب، تصوير وتحرير يضمن التعامل مع جميع جوانب الإنتاج بشكل احترافي، مما يجعل المنتج النهائي عالي الجودة لينقل رسالتك بشكل فعال. يعد الاستثمار في إنتاج الفيديو الاحترافي أمرًا بالغ الأهمية للشركات التي تتطلع إلى إحداث تأثير في عالم وسائل التواصل الاجتماعي.</p>
+            <div class="social_icon">
+                <a href="https://www.youtube.com/channel/UCPhv6cNceJJuJsL7nMqEniw?view_as=subscriber" target="_blank"><img src="{% static 'images/youtube.png' %}" ></a>
+                <a href="https://lpage.sadeemlanding.com/" target="_blank"><img src="{% static 'images/tiktok.png' %}" ></a>
+                <a href="https://www.instagram.com/Abonimr.ads/" target="_blank"><img src="{% static 'images/instagram.png' %}"></a>
+                <a href="https://www.facebook.com/Abonimr.ads/" target="_blank"><img src="{% static 'images/facebook.png' %}"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/index.js' %}">
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

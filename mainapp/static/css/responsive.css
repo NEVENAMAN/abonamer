@@ -1,0 +1,89 @@
+@media only screen and (max-width: 600px) {
+  header nav{
+    display: none;
+  }
+
+  header{
+    margin-top: -254px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+  .whatsapp{
+    position: relative;
+    left: -200px;
+    top: 65px;
+  }
+  #logo{
+    position: relative;
+    top: 48px;
+    width: 80px;
+    height: 80px;
+    right: 158px;
+  }
+  .contianer{
+    width: 80%;
+  }
+  .contact_us{
+    flex-direction: column;
+  }
+  .contact_us .secand_head{
+    position: relative;
+    top: -352px;
+  }
+  .contact_us h1{
+    position: relative;
+    top: -352px;
+  }
+  .contact_us img{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+    top: 170px;
+  }
+  .contianer p{
+    width: auto;
+  }
+  .cards{
+    flex-direction: column;
+    
+  }
+  .cards h1{
+    text-align: center;
+    position: relative;
+    top: -229px;
+  }
+  .cards .content{
+    width: fit-content;
+  }
+  .cards #secand_h{
+    position: relative;
+    top: -40px;
+  }
+  .cards #secand_p{
+    position: relative;
+    top: 296px;
+  }
+  .cards #secand_img{
+    position: relative;
+    top: -158px;
+  }
+  .cards #thired_img{
+    position: relative;
+    top:24px;
+  }
+  .cards img{
+    width: 80%;
+    position: relative;
+    top: 124px;
+  }
+  footer{
+    height: 600px;
+  }
+  .footer_content{
+        width: auto;
+  }
+}
